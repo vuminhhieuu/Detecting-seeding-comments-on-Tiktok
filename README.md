@@ -1,7 +1,7 @@
 
 # 🕵️ Detecting Seeding Comments on TikTok
 
-> Đồ án môn học **IE403 - Khai thác mạng dữ liệu truyền thông**  
+> Đồ án môn học **IE403 - Khai thác dữ liệu truyền thông xã hội**  
 > Trường: UIT  
 > Giảng viên: Nguyễn Văn Kiệt  
 > Nhóm thực hiện: Nhóm 5
@@ -32,7 +32,7 @@ Trong thời đại mạng xã hội phát triển mạnh mẽ, đặc biệt l�
 ## 🛠️ Quy trình thực hiện
 
 ### 1. Thu thập dữ liệu
-- **Nguồn dữ liệu:** Bình luận và người dùng từ TikTok (sử dụng API, Selenium, hoặc Apify)
+- **Nguồn dữ liệu:** Bình luận và người dùng từ TikTok (sử dụng Unoffical TikTok-API)
 - **Dữ liệu bao gồm:**
   - Video: `video_id`, `description`, `hashtags`
   - Bình luận: `comment_id`, `comment_text`, `like_count`, `timestamp`, `user_id`

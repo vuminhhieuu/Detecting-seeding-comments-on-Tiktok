@@ -1,0 +1,78 @@
+TIKTOK SEEDING ANALYSIS REPORT
+==================================================
+
+Analysis Date: 2025-05-29 10:21:31
+Total Comments Analyzed: 69
+Total Users: 67
+Total Videos: 2
+
+SUSPICIOUS USER PATTERNS
+------------------------------
+High duplicate ratio users: 0
+Multi-video commenters: 0
+Fast commenters: 66
+New accounts with high activity: 0
+
+SUSPICIOUS COMMENT PATTERNS
+------------------------------
+Very short comments: 24
+Emoji-only comments: 1
+Generic praise comments: 0
+Cross-video duplicates: 0
+
+HIGH RISK COMMENTS (Score >= 50)
+------------------------------
+Total high risk comments: 1 (1.4%)
+
+TOP 10 MOST SUSPICIOUS USERS
+------------------------------
+1. hoanghippie444 (Score: 50.0)
+   - Comments: 1
+   - Duplicate ratio: 0.00
+   - Followers: 160500
+
+2. gaidepbikhung2120 (Score: 40.0)
+   - Comments: 1
+   - Duplicate ratio: 0.00
+   - Followers: 67
+
+3. hayaoft.hoai (Score: 40.0)
+   - Comments: 1
+   - Duplicate ratio: 0.00
+   - Followers: 1417
+
+4. uyenne7033 (Score: 40.0)
+   - Comments: 1
+   - Duplicate ratio: 0.00
+   - Followers: 63
+
+5. phamanhquan212 (Score: 40.0)
+   - Comments: 1
+   - Duplicate ratio: 0.00
+   - Followers: 373
+
+6. sdrevieww (Score: 40.0)
+   - Comments: 1
+   - Duplicate ratio: 0.00
+   - Followers: 1566
+
+7. lenhathung202 (Score: 40.0)
+   - Comments: 1
+   - Duplicate ratio: 0.00
+   - Followers: 1701
+
+8. tnii_2004 (Score: 40.0)
+   - Comments: 1
+   - Duplicate ratio: 0.00
+   - Followers: 267
+
+9. snowlove992thanhtamha (Score: 40.0)
+   - Comments: 1
+   - Duplicate ratio: 0.00
+   - Followers: 118
+
+10. .nqm2008 (Score: 30.0)
+   - Comments: 1
+   - Duplicate ratio: 0.00
+   - Followers: 42
+
