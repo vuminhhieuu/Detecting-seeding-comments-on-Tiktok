@@ -2,7 +2,7 @@
 # 🕵️ Detecting Seeding Comments on TikTok
 
 > Đồ án môn học **IE403 - Khai thác dữ liệu truyền thông xã hội**  
-> Trường: Đại học Công nghệ Thông tin 
+> Trường: Đại học Công nghệ Thông tin  
 > Giảng viên: TS.Nguyễn Văn Kiệt và ThS. Huỳnh Văn Tín  
 > Nhóm thực hiện: Nhóm 5
 
