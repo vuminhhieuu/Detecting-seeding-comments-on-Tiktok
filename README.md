@@ -2,8 +2,8 @@
 # 🕵️ Detecting Seeding Comments on TikTok
 
 > Đồ án môn học **IE403 - Khai thác dữ liệu truyền thông xã hội**  
-> Trường: UIT  
-> Giảng viên: Nguyễn Văn Kiệt  
+> Trường: Đại học Công nghệ Thông tin 
+> Giảng viên: TS.Nguyễn Văn Kiệt và ThS. Huỳnh Văn Tín  
 > Nhóm thực hiện: Nhóm 5
 
 ---
@@ -37,35 +37,40 @@ Trong thời đại mạng xã hội phát triển mạnh mẽ, đặc biệt l�
   - Video: `video_id`, `description`, `hashtags`
   - Bình luận: `comment_id`, `comment_text`, `like_count`, `timestamp`, `user_id`
   - Người dùng: `followers`, `comment_count`, `duplicate_ratio`, v.v.
-- **Lưu trữ:** CSV, MongoDB hoặc PostgreSQL
+- **Lưu trữ:** CSV, MongoDB hoặc PostgreSQL (Đang cân nhắc)
 
 ### 2. Tiền xử lý dữ liệu
 - **Văn bản:**
   - Xóa ký tự đặc biệt, link, emoji
   - Chuẩn hoá tiếng Việt (xóa dấu, viết thường)
-  - Tách từ bằng Underthesea, Pyvi, hoặc VnCoreNLP
-  - Vector hóa bằng TF-IDF, CountVectorizer hoặc embedding như FastText, PhoBERT
-- **Hành vi người dùng:**
+- **Hành vi người dùng (chưa làm được):**
   - Tính duplicate ratio
   - Cosine similarity giữa các bình luận
   - Tần suất bình luận theo thời gian
 
-### 3. Xây dựng mô hình
+### 3. Gán nhãn
+
+Sử dụng 3 LLM(PhoBERT, LLaMA3, Mistral) tự động gán nhãn bình luận dựa trên prompt chuyên biệt. Khoảng 100–200 mẫu được kiểm tra thủ công để đánh giá độ tin cậy. Nhãn cuối cùng hợp nhất bằng weighted voting với trọng số: LLaMA3 (5), Mistral (3), PhoBERT (2). Các mẫu chưa gán nhãn sẽ được xử lý thủ công.
+
+
+### 4. Xây dựng mô hình
 - **Mục tiêu:** Phân loại bình luận là Seeding (`1`) hoặc Không Seeding (`0`)
 - **Mô hình sử dụng:**
-  - Truyền thống: Random Forest, XGBoost, Logistic Regression, SVM
-  - Deep Learning: LSTM, BiLSTM, PhoBERT fine-tuned
+  - Truyền thống: SVM
+  - Deep Learning: LSTM, BiLSTM
+  - Transformer: VisoBert, CafeBert, PhoBert, XLM-R, FastText
 - **Input:** Văn bản và đặc trưng hành vi
 - **Output:** Nhãn nhị phân
 
-### 4. Đánh giá mô hình
-- **Chia tập train/test:** 80/20
-- **Nếu không có nhãn:** Gán nhãn thủ công hoặc dùng clustering (KMeans)
-- **Chỉ số đánh giá:** Accuracy, Precision, Recall, F1-score, ROC-AUC
+### 5. Đánh giá mô hình
+- **Chia tập train/dev/test:** 80/10/10
+- **Chỉ số đánh giá:** Accuracy, Precision, Recall, F1-score
 - **Trực quan hóa:** Confusion Matrix, ROC Curve, WordCloud
 
-### 5. Triển khai ứng dụng
-- **Framework:** Flask hoặc Streamlit
+### 6. Triển khai ứng dụng
+- **Framework backend:** FastAPI
+- **Framework frontend:** Vite + React
+- **Model**: Hugging face
 - **Tính năng chính:**
   - Nhập URL video TikTok
   - Dự đoán % bình luận seeding
@@ -78,7 +83,7 @@ Trong thời đại mạng xã hội phát triển mạnh mẽ, đặc biệt l�
 | Thành phần       | Mô tả |
 |------------------|-------|
 | Dataset          | Bình luận TikTok đã gán nhãn seeding / không seeding |
-| Mô hình          | Mô hình học máy phát hiện seeding |
+| Mô hình          | Mô hình đã được fine-tune cho việc phát hiện seeding |
 | Web App          | Ứng dụng kiểm tra bình luận seeding theo URL |
 | Báo cáo          | Tài liệu chi tiết phương pháp và kết quả |
 
